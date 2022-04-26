@@ -1,5 +1,5 @@
 
-# fitbri.py Python script to fit data with a line
+# fitbri.py Python script to fit data with the Briére development rate function
 # Created by Luca Rossini on 23 February 2021
 # E-mail luca.rossini@unitus.it
 # Last update 26 April 2022
@@ -59,7 +59,7 @@ fit = odr.ODR(dataset, briere, beta0=[0.001, 0., 34., 2.])
 
 out = fit.run()
 
-# Best fit line and errors
+# Best fit function and errors
 
 best_fit_line = out.beta
 err = out.sd_beta
