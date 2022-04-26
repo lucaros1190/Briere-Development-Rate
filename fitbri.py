@@ -2,7 +2,7 @@
 # fitbri.py Python script to fit data with a line
 # Created by Luca Rossini on 23 February 2021
 # E-mail luca.rossini@unitus.it
-# Last update 24 Febryary 2021
+# Last update 26 April 2022
 
 import pandas as pd
 import plotly.graph_objs as go
