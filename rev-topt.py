@@ -27,7 +27,7 @@ def Err_ToptBriere(a, ea, T_L, eT_L, T_M, eT_M, m, em):
     return eT_opt
 
 
-# Calculation of the errors
+# Calculation of optimal temperatures and associated errors for all the isolates involved into the study
 
     # Isolate P-1
 
