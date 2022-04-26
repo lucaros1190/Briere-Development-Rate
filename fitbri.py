@@ -115,7 +115,7 @@ BIC = 4 * np.log(len(x)) - 2 * np.log(ss_res/len(x))
 
 def optemp(y):
     a, T_L, T_M, m = y
-    T_opt = (2 * m * T_M + T_L * (m + 1) + sqrt(4 * m * m * T_M * T_M + T_L * T_L * (m + 1) * (m + 1) - 4 * m * T_M * T_L))  / (4 * m + 2)
+    T_opt = (2 * m * T_M + T_L * (m + 1) + sqrt(4 * m * m * T_M * T_M + T_L * T_L * (m + 1) * (m + 1) - 4 * m * m * T_M * T_L))  / (4 * m + 2)
     return T_opt
     
 def err_optemp(y, ey):
@@ -124,7 +124,7 @@ def err_optemp(y, ey):
     
     A = pow(eT_L, 2) * pow( (m + 1)/(4*m + 2) + (1/(4*m + 2)) * ((T_L * pow((m + 1), 2) - 2*m * T_M)/(sqrt(4 * m * m * T_M * T_M + T_L * T_L * pow(m+1, 2) - 4*m * T_M * T_L))) ,2);
                 
-    B = pow(eT_L, 2) * pow(m/(2*m +1) + (1/(4*m + 2) * (4*m*m * T_M - 2*m * T_L)/(sqrt(4*m*m * T_M*T_M + T_L*T_L * pow((m+1), 2) - 4*m * T_L * T_M))) ,2);
+    B = pow(eT_L, 2) * pow(m/(2*m +1) + (1/(4*m + 2) * (4*m*m * T_M - 2*m * T_L)/(sqrt(4*m*m * T_M*T_M + T_L*T_L * pow((m+1), 2) - 4 * m * m * T_L * T_M))) ,2);
                 
     C = pow(em, 2) * pow(2*T_M * ((1/(4*m + 2)) - ((4*m)/(pow((4*m + 2) ,2))) + (T_L/((pow((4*m + 2) ,2)))) * ((4*T_M*T_M * (m - 2*m*m) - T_L*T_L * (m+1) * (4*m + 3) + T_M * T_M * (8*m - 2) )/( (pow((4*m + 2) ,2)) * sqrt(4*m*m * T_M*T_M + T_L*T_L * pow((m + 1), 2) - 4*m*T_L * T_M) )) ) ,2);
     
